@@ -1,6 +1,6 @@
-setwd("c:/Users/acer/Desktop/¦ö©¾")
-WCST <- read.csv("WCST.csv", header = FALSE)
-WCST_Ans <- read.csv("WCST_coding.csv", header = FALSE)
+setwd("c:/Users/acer/Desktop/¦ö©¾") # change the file directory
+WCST <- read.csv("WCST.csv", header = FALSE) # read the source file
+WCST_Ans <- read.csv("WCST_coding.csv", header = FALSE) # read the rule code file
 
 WCST_Ans[] <- lapply(WCST_Ans, as.character)
 
@@ -14,4 +14,4 @@ for (i in 1:64){
   )
 }
 
-write.csv(WCST,file = "WCST_convert.csv")
+write.csv(WCST,file = "WCST_convert.csv") # output the converted file
