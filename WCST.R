@@ -4,7 +4,7 @@ WCST_Ans <- read.csv("WCST_coding.csv", header = FALSE) # read the rule code fil
 
 WCST_Ans[] <- lapply(WCST_Ans, as.character)
 
-for (i in 1:64){
+for (i in 1:128){
   ifelse(WCST[i,1] == 1, WCST[i,1] <- WCST_Ans[i,1],
          ifelse(WCST[i,1] == 2, WCST[i,1] <- WCST_Ans[i,2],
                 ifelse(WCST[i,1] == 3, WCST[i,1] <- WCST_Ans[i,3],
